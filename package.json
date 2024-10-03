@@ -1,11 +1,32 @@
 {
   "name": "travelbay",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server/server.js",
+    "client": "npm run start --prefix client",
+    "app": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Mike",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@chakra-ui/react": "^2.9.3",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@reduxjs/toolkit": "^2.2.7",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-async-handler": "^1.2.0",
+    "framer-motion": "^11.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
 }
